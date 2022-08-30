@@ -396,6 +396,19 @@ header
     background-color: var(--color2);
     color: var(--color1);
 }
+/*BOTON WSP*/
+.fa-whatsapp
+{
+    display: block;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    padding: 1rem;
+    font-size: 2em;
+    background-color: green;
+    color: var(--color1);
+    border-radius: 50%;
+}
 
 
 /*DISEÑO RESPONSIVE*/
