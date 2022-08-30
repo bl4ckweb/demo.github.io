@@ -1,0 +1,501 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+:root 
+{
+    --color1: #fff;
+    --color2: #2bb599;
+}
+html 
+{
+    scroll-behavior: smooth;
+}
+section
+{
+    padding: 4rem 0;
+}
+/*HEADER*/
+header
+{
+    width: 100%;
+    height: 75px;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+    z-index: 1111;
+}
+.logo 
+{
+    color: var(--color2);
+}
+#bar 
+{
+    display: none;
+}
+.btn
+{
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color2);
+}
+.menu 
+{
+    width: 100%;
+    height: 0vh;
+    line-height: 10vh;
+    transition: .3s;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    text-align: center;
+    background-color: var(--color1);
+}
+.menu li 
+{
+    display: none;
+}
+.menu li a 
+{
+    padding: .5rem;
+    font-size: 1.3em;
+    color: var(--color2);
+    transition: .3s;
+    border-radius: .4rem;
+}
+.menu li a:hover 
+{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+#bar:checked ~ .menu 
+{
+    height: 40vh;
+}
+#bar:checked ~ .menu li 
+{
+    display: block;
+}
+
+/*INICIO*/
+#inicio
+{
+    width: 100%;
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(img/inicio.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.inicio-content 
+{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: var(--color1);
+}
+.inicio-content p 
+{
+    margin: 2rem auto;
+    max-width: 700px;
+}
+.inicio-content a 
+{
+    display: inline-block;
+    padding: 1rem;
+    color: var(--color1);
+    font-weight: 400;
+    border: 2px solid var(--color1);
+    transition: .3s;
+}
+.inicio-content a:hover 
+{
+    background-color: var(--color1);
+    color: var(--color2);
+}
+/*ABOUT*/
+#nosotros
+{
+    width: 100%;
+    min-height: 750px;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+}
+.nosotros-content 
+{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box-left
+{
+    width: 100%;
+    padding: 1rem;
+}
+.box-left img 
+{
+    width: 100%;
+    margin: 1rem auto;
+}
+.box-left a 
+{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 1rem;
+    border: 1px solid var(--color2);
+    font-size: 1.3em;
+    transition: .3s;
+}
+.box-left a:hover 
+{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+.box-right
+{
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--color2);
+}
+.box-right h2
+{
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+.box-right p 
+{
+    margin: 1.5rem 0;
+}
+/*BANNER*/
+.banner
+{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    background:linear-gradient(#2bb5998f,#2bb5998c),url(img/banner.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner-content
+{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: var(--color1);
+}
+.banner-content i 
+{
+    font-weight:600;
+    max-width: 500px;
+    margin: auto;
+}
+.banner-content p 
+{
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+/*TRABAJO*/
+#trabajo 
+{
+    width: 100%;
+    min-height: 750px;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+}
+.trabajo-content
+{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+#trabajo h2 
+{
+    text-decoration: underline;
+    color: var(--color2);
+    margin: 3rem auto;
+}
+.grid 
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 20px;
+}
+.item 
+{
+    display: flex;
+    flex-direction: column;
+}
+.item img 
+{
+    width: 100%;
+}
+.item a 
+{
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    color: var(--color2);
+    border: 1px solid var(--color2);
+    padding: 1rem;
+    transition: .3s;
+}
+.item a:hover 
+{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+/*SERVICIOS*/
+#servicio
+{
+    width: 100%;
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color1);
+}
+.servicio-content
+{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.servicio-content h2 
+{
+    color: var(--color2);
+    text-decoration: underline;
+    margin: 2rem 0;
+}
+.flex-item 
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.servicio-item 
+{
+    width: 100%;
+    padding: 1rem;
+    color: var(--color2);
+    border-radius: 2rem;
+    box-shadow: 0 7px 29px rgba(0,0,0,0.20);
+    margin: 1rem auto;
+}
+.servicio-item i 
+{
+    font-size: 5em;
+}
+.servicio-item p 
+{
+    margin: 1rem auto;
+}
+
+/*CONTACTO*/
+#contacto
+{
+    width: 100%;
+    min-height: 850px;
+    display: flex;
+    align-items: center;
+    background:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(img/contacto.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contacto-content 
+{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: var(--color1);
+}
+.contacto-content p 
+{
+    margin: 1rem auto;
+}
+.form 
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.field 
+{
+    width: 100%;
+}
+.field input ,.field textarea
+{
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .3rem;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+}
+.field input::placeholder ,.field textarea::placeholder
+{
+    color: var(--color2);
+}
+
+.form input[type="submit"]
+{
+    padding: 1rem;
+    width: 100%;
+    color: var(--color1);
+    background-color: transparent;
+    border: 1px solid var(--color1);
+    transition: .3s;
+    font-size: 1.2em;
+}
+.form input[type="submit"]:hover
+{
+    background-color: var(--color1);
+    color: var(--color2);
+}
+/*BOTON ARRIBA*/
+.fa-arrow-up
+{
+    display: inline-block;
+    position: fixed;
+    padding: 1rem;
+    font-size: 1.5em;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--color1);
+    border-radius: 50%;
+    color: var(--color2);
+    border: 2px solid var(--color2);
+    transition: .3s;
+}
+.fa-arrow-up:hover 
+{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+
+/*DISEÑO RESPONSIVE*/
+@media screen and (min-width:768px)
+{
+/*HEADER*/
+.btn 
+{
+    display: none;
+}
+.menu 
+{
+    height: 75px;
+    line-height: 75px;
+    top: 0;
+    background-color: transparent;
+    transition: none;
+}
+.menu ul 
+{
+    text-align: right;
+    padding-right: 1rem;
+}
+.menu li 
+{
+    display: inline-block;
+}
+.menu li a 
+{
+    margin: 10px;
+    font-size: 1.2em;
+}
+/*INICIO*/
+.inicio-content 
+{
+    font-size: 1.4em;
+}
+/*ABOUT*/
+.box-left
+{
+    width: 40%;
+}
+.box-right
+{
+    width: 40%;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+/*BANNER*/
+.banner-content p 
+{
+    font-size: 1.4em;
+}
+/*TRABAJO*/
+.trabajo-content 
+{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    font-size: 1.5em;
+}
+.grid 
+{
+    margin: auto;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+/*SERVICIOS*/
+.servicio-content 
+{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    font-size: 1.5em;
+}
+.servicio-content h2 
+{
+    margin-left: 2rem;
+}
+.servicio-item 
+{
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+
+/*CONTACTO*/
+.contacto-content
+{
+    width: 65%;
+    margin: auto;
+    font-size: 1.3em;
+}
+.field 
+{
+    width: 45%;
+}
+
+.form input[type="submit"]
+{
+    width: 45%;
+    margin-left: 50%;
+}
+}
